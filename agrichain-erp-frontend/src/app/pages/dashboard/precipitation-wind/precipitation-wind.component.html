@@ -1,0 +1,60 @@
+<nb-card size="large">
+    <nb-card-header>Weather Report</nb-card-header>
+    <nb-card-body>
+      <nb-tabset class="air-sun-block" fullWidth>
+        <nb-tab tabTitle="Today">
+        	<div class="report-block">
+				<p>  <b> Precipitation </b> </p>
+				<div class="report-status">
+					<div class="precipition-text">
+						<p>Chance</p>
+						<p class="vol-title">Volume <br> (mm) </p>
+					</div>
+					<div class="precipition-data">
+						<ngx-precipitation></ngx-precipitation>
+						<ngx-precipitation></ngx-precipitation>
+						<ngx-precipitation></ngx-precipitation>
+						<ngx-precipitation></ngx-precipitation>
+						<ngx-precipitation></ngx-precipitation>
+						<ngx-precipitation></ngx-precipitation>
+					</div>
+				</div>
+				<div class="message">
+					<div>Total daily volume 4.8 mm</div>
+				</div>
+				<div class="overall-status">
+					<p>Wind</p>
+				</div>
+				<div class="wind-report">
+					<div class="wind-speed">7 </div> 
+					<div class="wind-speed-unit">
+						<div > <i class="nb-lightbulb"></i> </div>
+						<div >mph</div>
+					</div>
+					<div class="wind-dir">
+						<div > <h3> Modreate </h3> </div>
+						<div class="wind-from">Now - From South</div>	
+					</div>
+				</div>
+				<div class="wind-speed-report">
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					<ngx-precipitation-wind-speed></ngx-precipitation-wind-speed>
+					
+					
+				</div>
+			</div>
+		</nb-tab>
+
+
+        <nb-tab tabTitle="Tommorrow">
+        </nb-tab>
+        <nb-tab tabTitle="10 Days">
+          </nb-tab>
+      </nb-tabset>
+    </nb-card-body>
+  </nb-card>

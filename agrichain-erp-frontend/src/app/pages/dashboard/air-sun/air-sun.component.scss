@@ -1,0 +1,128 @@
+
+@import '../../../@theme/styles/themes';
+@import '~@nebular/theme/components/card/card.component.theme';
+@import '~@nebular/theme/styles/global/typography/typography';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+
+
+
+@include nb-install-component() {
+
+    .air-sun-block {
+        border-bottom: 0px;
+        nb-tab{
+            overflow: inherit;
+        }
+        /deep/ ul{
+            padding-left: 0px;
+            padding-right: 0px;
+            border-bottom: 0px;
+            align-content: center;
+            justify-content: space-between;
+            li{
+                a{
+                    color: #ffffff;
+                    padding: 15px 10px 10px 10px;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    &:before{
+                        border-radius: 0px;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+        .report-block{
+            padding-top: 15px;
+            .report-status{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                .report-text{
+                    display: flex;
+                    flex-direction: column;
+                    h5{
+                        font-size: 14px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .report-number{
+                    font-size: 2.5rem;
+                    color: #39b819;
+                    font-weight: nb-theme(font-weight-bold);
+                }
+            }  
+            .weather-report-bar{
+                position: relative;
+                &:before{
+                    position: absolute;
+                    content: '';
+                    width: 0; 
+                    height: 0; 
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top-width: 5px;
+                    border-top-style: solid;
+                    border-top-color: #39b819;
+                    left:25px;
+                }
+                img{
+                    width: 100%;
+                }
+            } 
+            .measure-unit{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                .unit{
+                    font-size: 12px;
+                }
+            }
+            .message{
+                padding-top: 10px;
+                padding-bottom:10px;
+                border-bottom: 1px solid #ffffff; 
+                font-size: 0.9rem;
+            }
+            .overall-status{
+                padding-top: 12px;
+                h6{
+                    font-size: 0.8rem;
+                    margin-bottom: 5px;
+                }
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+
+    @include nb-for-theme(default) {
+        .air-sun-block {
+            
+            /deep/ ul{
+                li{
+                    a{
+                        color: #000000;
+                    }
+                }
+            }
+
+            .report-block{
+                .message{
+                    border-bottom: 1px solid #000000;
+                }
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down(xs) {
+       
+    }
+
+}

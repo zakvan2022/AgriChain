@@ -1,0 +1,31 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "axios": "^0.18.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "crypto-js": "^3.1.9-1",
+    "debug": "~2.6.9",
+    "dotenv": "^6.0.0",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "express-graphql": "^0.6.12",
+    "express-validator": "^5.2.0",
+    "graphql": "^0.13.2",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mailgen": "^2.0.5",
+    "moment": "^2.22.2",
+    "mongodb": "^2.2.33",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.6.7",
+    "serve-favicon": "~2.4.5"
+  }
+}

@@ -1,0 +1,38 @@
+type BatchRecord {
+  id: ID!
+  createdAt: Date
+  updatedAt: Date
+  barcode: String
+  hash: String
+  batchId: String
+  produceType: String
+  producedBy: String
+  productionLocation: String
+  productionTimestamp: Date
+  batchBestTimestamp: Date
+  metadata: String
+  constituents: [String]
+  properties: [Property]
+}
+
+extend type Query {
+  batchRecords: [BatchRecord!]!
+}
+
+extend type Mutation {
+  createBatchRecord(input: newBatchRecordInput!): BatchRecord!
+}
+
+input newBatchRecordInput {
+  batchId: String
+  barcode: String
+  produceType: String
+  producedBy: String
+  productionLocation: String
+  productionTimestamp: Date
+  batchBestTimestamp: Date
+  metadata: String
+  constituents: [String]!
+  properties: [PropertyInput]!
+  metadata: String
+}

@@ -1,0 +1,31 @@
+type Constituent {
+  id: ID!
+  createdAt: Date
+  updatedAt: Date
+  type: String
+  company: ID
+  time: Date
+  location: String
+}
+
+extend type Query {
+  constituents: [Constituent!]!
+  getConstituents(input: [String!]!) : [Constituent!]!
+}
+
+extend type Mutation {
+  createConstituent(input: newConstituentInput!): Constituent!
+  addConstituents(input: newConstituentsInput!): [Constituent!]!
+}
+
+input newConstituentsInput {
+  constituents: [newConstituentInput!]!
+}
+
+input newConstituentInput {
+  id: ID
+  type: String
+  company: ID
+  time: Date
+  location: String
+}

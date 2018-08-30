@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header>
+    <div class="title">
+      <h2>Trace Map Result</h2>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-direction *ngIf="dir" [renderOptions]="options"
+      [origin]="dir.origin" [destination]="dir.destination" [waypoints]="way" ></agm-direction>
+    </agm-map>
+  </nb-card-body>
+</nb-card>

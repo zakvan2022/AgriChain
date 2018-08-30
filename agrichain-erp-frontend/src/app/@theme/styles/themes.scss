@@ -1,0 +1,183 @@
+// @nebular theming framework
+@import '~@nebular/theme/styles/theming';
+// @nebular out of the box themes
+@import '~@nebular/theme/styles/themes';
+
+// @import './assets';
+// @include assets-style();
+
+
+// which themes you what to enable (empty to enable all)
+$nb-enabled-themes: (default, cosmic);
+
+$nb-themes: nb-register-theme((
+  
+  sidebar-header-gap: 0rem,
+  sidebar-header-height: initial,
+  layout-content-width: 1400px,
+  
+  
+  darkgray-color : #202120,
+  light-gray : #30322E,
+  notification-bg: #707070,
+  navbar-icon-border: #39b819,
+  navbar-icon-color: #D3D3D3,
+  sidebar-bg: #ffffff,
+  count-text-color: #ffffff,
+  navbar-background: #ffffff,
+  nav-icon-color: #000000,
+  nav-color: #000000,
+  user-pic-border-color: #39b819,
+  sidebar-menu-color: #ffffff,
+  sidebar-menu-title: #000000,
+  menu-items-bg: #ffffff,
+  hover-menu-item-bg: #ffffff,
+  content-bg: #ebeff5,
+  chevron-color: #39b819,
+  transparent-bg: transparent,
+  active-tab-border-bottom: #39b819,
+  consumption-table-bg: #F5F5F5,
+  drop-down-bg: #ffffff,
+  color-success: #39b819,
+  color-fg: #000000,
+  card-shadow:  0px 3px 7px 0px rgba(0, 0, 0, 0.45),
+  header-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.11),
+  
+  
+
+  
+
+
+
+
+  /* header variables */
+  user-fg-highlight: #39b819,
+  switcher-bg-color: #d0d0d0,
+  user-image-seprator-color: #d0d0d0,
+  menu-font-size: 16px,
+  theme-switcher-bg: #39b819,
+  theme-switcher-point: #ffffff,
+  
+  
+  
+
+  /* variables for sidebar */
+  scrollable-bg: #ffffff,
+  menu-item-padding: 0.25rem 0.75rem,
+  
+  sidebar-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.11),  
+  menu-item-separator: transparent,
+  icon-color: #39b819,
+  menu-active-border-bottom-color:   #b7b7b7,
+  menu-border-left: #39b819,
+  sidebar-width: 15.45rem,
+  menu-font-family: Roboto-Regular,
+  menu-group-font-size: 16px,
+  card-header-font-size: 1.5rem,
+  
+  
+  
+
+  /* variable for layout */
+ 
+  
+  
+  
+
+  font-main: Roboto,
+  font-secondary: Exo,
+), default, default);
+
+$nb-themes: nb-register-theme((
+  
+  color-bg: #202020,
+  color-bg-active: #202020,
+  color-primary: #39b819,
+  menu-icon-color: #39b819,
+  menu-icon-active-color: #39b819,
+  layout-bg: #2f2f2f,
+  color-fg: #39b819,
+  scrollbar-fg: #43bd24,
+  scrollbar-bg: #000000,
+  color-fg-text: #fff,
+  link-color: #fff,
+  link-color-hover: #14ffbe,
+  separator: #5bc93f,
+  navbar-background: #202020,
+  nav-icon-color: #ffffff,
+  nav-color: #43bd24,
+  user-pic-border-color: #39b819,
+  sidebar-menu-color: #000000,
+  sidebar-menu-title: #ffffff,
+  menu-items-bg: #000000,
+  hover-menu-item-bg: #202020,
+  content-bg: #30322E,
+  chevron-color: #39b819,
+  transparent-bg: transparent,
+  active-tab-border-bottom: #39b819,
+  consumption-table-bg: #3F3E3E,
+  drop-down-bg: #39b819,
+  color-success: #39b819,
+  card-shadow:  0px 3px 7px 0px rgba(0, 0, 0, 0.45),
+  header-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.11),
+  
+  
+  
+  
+  
+
+  /* header variables */
+  user-fg-highlight: #39b819,
+  user-image-seprator-color: #cac7c7,
+  theme-switcher-bg: #000000,
+  theme-switcher-point: #39b819,
+  
+  
+
+  
+
+
+  /* sidebar variable */
+  scrollable-bg: #000000,
+  menu-item-padding: 0.25rem 0.75rem,
+  
+  sidebar-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.11),  
+  menu-item-separator: transparent,
+  icon-color: #39b819,
+  menu-active-border-bottom-color: #39b819,
+  menu-border-left: #39b819,
+  switcher-bg-color: #000000,
+  sidebar-width: 15.45rem,
+  menu-font-family: Roboto-Regular,
+  menu-font-size: 16px,
+  menu-group-font-size: 16px,
+ 
+  
+  
+  card-header-font-size: 1.5rem,
+  
+
+
+
+
+  
+  darkgray-color : #202120,
+  light-gray : #30322E,
+  notification-bg: #38b819,
+  navbar-icon-border: #38b819,
+  navbar-icon-color: #ffffff,
+  sidebar-bg: #000000,
+
+  count-text-color: #ffffff,
+
+
+
+  
+  
+  sidebar-header-gap: 0,
+  sidebar-header-height: initial,
+  layout-content-width: 1400px,
+
+  font-main: Roboto,
+  font-secondary: Exo,
+), cosmic, cosmic);

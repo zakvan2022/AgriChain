@@ -1,0 +1,192 @@
+@import '../../../@theme/styles/themes';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+@include nb-install-component() {
+
+  /*nb-card {
+    background-image: nb-theme(radial-gradient);
+  }*/
+
+  nb-card-body {
+    height: 100%;
+    color: nb-theme(color-fg);
+  }
+  
+  .location {
+    font-family: nb-theme(font-secondary);
+    font-size: 1.5rem;
+    font-weight: nb-theme(font-weight-normal);
+    color: nb-theme(color-fg-heading);
+    margin-top:1rem;
+  }
+
+  .date {
+    font-family: nb-theme(font-main);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: nb-theme(font-weight-light);
+  }
+
+  .daily-forecast {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1.5rem;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+
+      .temperature {
+        font-size: 3rem;
+        font-weight: nb-theme(font-weight-bolder);
+        font-family: nb-theme(font-secondary);
+        color: nb-theme(color-fg-heading);
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+
+      .icon {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        color: nb-theme(color-success);
+
+        @include nb-for-theme(cosmic) {
+          color: nb-theme(color-fg);
+          
+        }
+      }
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+
+      .parameter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .parameter-name {
+          font-family: nb-theme(font-main);
+          font-size: 1.25rem;
+          font-weight: nb-theme(font-weight-light);
+          line-height: 2rem;
+        }
+
+        .parameter-value {
+          font-family: nb-theme(font-secondary);
+          color: nb-theme(color-fg-heading);
+          font-weight: nb-theme(font-weight-bolder);
+        }
+      }
+    }
+  }
+
+  .weekly-forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    .day {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .caption {
+        text-transform: uppercase;
+        font-family: nb-theme(font-secondary);
+        color: nb-theme(color-fg-heading);
+        font-weight: nb-theme(font-weight-bold);
+        font-size: 1.25rem;
+      }
+
+      i {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+
+      .temperature {
+        color: nb-theme(color-fg-heading);
+        font-family: nb-theme(font-secondary);
+        font-weight: nb-theme(font-weight-bold);
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .pricipitation-chances{
+    margin-top: 20px;
+    color: #ffffff;
+    p{
+      font-size: 0.9rem;
+      .pre-icon{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        color: nb-theme(color-success);
+      }
+    }
+  }
+
+  .shot-wheather-report{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p{
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-weight: 300;
+    }
+  }
+
+
+
+  /deep/ ul{
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 0px;
+    align-content: center;
+    justify-content: space-between;
+    li{
+        a{
+            color: #ffffff;
+            padding: 15px 10px 10px 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            &:before{
+                border-radius: 0px !important;
+                height: 3px !important;
+            }
+        }
+    }
+}
+
+
+
+
+  @include nb-for-theme(default) {
+
+     /deep/ ul{
+        li{
+            a{
+                color: #000000;
+            }
+        }
+    }
+
+    .pricipitation-chances{
+      color: #000000;
+    }
+    .shot-wheather-report{
+      p{
+        color: #000000;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    nb-card-body {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

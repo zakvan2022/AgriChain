@@ -1,0 +1,438 @@
+
+
+
+@darkgray-color : #202120;
+@light-gray : #30322E;
+@black : #000000;
+@green : #38b819;
+@white: #ffffff;
+@gray: #D3D3D3;
+
+
+
+
+@color-bg: #202020;
+@color-bg-active: #202020;
+@color-primary: #39b819;
+@menu-icon-color: #39b819;
+@menu-icon-active-color: #39b819;
+@layout-bg: #2f2f2f;
+@color-fg: #5bc93f;
+@scrollbar-fg: #43bd24;
+@scrollbar-bg: #000000;
+@color-fg-text: #fff;
+@link-color: #fff;
+@link-color-hover: #14ffbe;
+@separator: #5bc93f;
+  
+
+/*************
+
+sidebar style
+
+******************/
+
+
+/************
+*
+*  Style for header section
+*
+*/
+
+body{
+    button {
+        i{
+            border-radius: 50%;
+            padding: 4px;
+            font-size: 26px;
+            border: 2px solid;
+        }
+    } 
+
+    nb-layout-header{
+        nav{
+            .navigation-container{
+                width: 80%;
+                align-items: center;
+                .navigation{
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                    color: @green;
+                }
+            }
+            .header-container{
+                &.left{
+                    width: 40% !important;
+                }
+                &.right{
+                    .control-item{
+                        nb-action{
+                            nb-user{
+                                .user-container{
+                                    padding-left: 15px !important;
+                                    border-right: 1px solid @green !important;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .logo-containter{
+                    .navigation{
+                        font-size: 2.5rem;
+                    }
+                    .logo{
+                        border-left: 0px !important;
+                    }
+                }
+
+                .control-item{
+                    &:nth-child(4),  &:nth-child(3) {
+                        .icon-container{
+                            position: relative;
+                            .notification-count{
+                                position: absolute;
+                                content: '';
+                                top: -8px;
+                                bottom: 0;
+                                right: -10px;
+                                border-radius: 50%;
+                                -webkit-border-radius:50%;
+                                -moz-border-radius: 50%;
+                                padding: 3px 7px;
+                                text-align: center;
+                                font-size: 14px;
+                                display: inline-table;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        padding-right: 25px;
+                        border-right: 2px solid @gray;
+                    }
+                }
+    
+            }
+        }
+    }
+
+    &.nb-theme-cosmic{
+        /* header */
+        nb-layout-header{
+            nav{
+                .navigation-container{
+                    .navigation{
+                        color: @green;
+                    }
+                }
+                .header-container{
+                    &.right{
+                        .control-item{
+                            nb-action{
+                                nb-user{
+                                    .user-container{
+                                        border-right: 1px solid @green;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    .logo-containter{
+                        .logo{
+                            border-left: 0px;
+                        }
+                    }
+
+                    .control-item{
+                        &:nth-child(4),  &:nth-child(3) {
+                            .icon-container{
+                                position: relative;
+                                .notification-count{
+                                    background-color: @green;
+                                }
+                            }
+                        }
+                        &:nth-child(3){
+                            border-right: 2px solid @gray;
+                        }
+                    }
+        
+                }
+            }
+        }
+
+        /* sidebar */ 
+        .layout-container{
+            .menu-sidebar{
+                .main-container{
+                    nb-menu{
+                        .menu-items{
+                            li{
+                               &.menu-item{
+                                    a{
+                                        border-radius: 0px;
+                                        &::before{
+                                            display: none;
+                                        }
+                                        &.active{
+                                            border-left: 3px solid @green;
+                                            border-bottom: 1px solid @green;
+                                        }
+                                        .menu-icon{
+                                            color: @green;
+                                        }
+                                        .menu-title{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /* content */
+
+        .content{
+            .columns{
+                .main-content{
+                    background-color: @light-gray;
+                }
+            }
+        }
+
+        
+        
+    }
+}
+
+
+
+/***/
+
+
+.layout-container{
+    nb-sidebar.menu-sidebar{
+        background-color: @black !important;
+        margin-top: 0px !important;
+        .main-container{
+            box-shadow: none;
+            .supportus-btn{
+                display: none;
+            }
+            .scrollable{
+                padding-top: 0px;
+                background-color: @black;
+            }
+        }
+    }
+}
+
+.nb-theme-cosmic  .menu-item a.active{
+    background-color: @black;
+}
+
+.nb-theme-cosmic {
+    background-color: @black;
+}
+
+
+.nb-theme-cosmic  .menu-item a{
+    color: @white;
+}
+
+.nb-theme-cosmic  .menu-item .menu-icon{
+    color: @green;
+}
+
+.nb-theme-cosmic  .menu-item a:hover{
+    background-color: @green;
+}
+.nb-theme-cosmic  .menu-item .chevron{
+    color: @green;
+}
+
+.nb-theme-cosmic  .menu-item > .menu-items > .menu-item{
+    background-color: @black;
+}
+.nb-theme-cosmic  .menu-item > .menu-items{
+    background-color: @black;
+}
+
+.nb-theme-cosmic  .menu-item > .menu-items > .menu-item a{
+    border: 0px;
+}
+.nb-theme-cosmic  .menu-item > .menu-items > .menu-item a:hover{
+    background-color: @green;
+}
+
+
+.nb-theme-default .layout-container .menu-sidebar{
+    background-color: @white;
+}
+
+/* .nb-theme-cosmic nb-menu .menu-items > .menu-item:first-child{
+        border-bottom: 1px background-color: @black;solid @green;
+        border-left: 3px solid @green;
+    }
+*/
+
+
+/************
+
+header style
+
+*************/
+
+
+
+.nb-theme-cosmic  .layout  nav{
+    background-color: @darkgray-color !important;
+}
+
+.nb-theme-cosmic {
+    border-left: 0px;
+}
+
+.nb-theme-cosmic  button,  .nb-theme-default  a{
+    color: @white;
+}
+.nb-theme-cosmic .control-item,  .nb-theme-default .control-item{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.nb-theme-cosmic  button i{
+    border-color: @green !important;
+}
+
+.nb-theme-default  button i{
+    border-color: @gray;
+}
+
+.nb-theme-default  i.control-icon{
+    border-color: @gray;
+}
+.nb-theme-default nb-actions.medium nb-action i.control-icon{
+    border-color: @gray; 
+}
+
+.nb-theme-cosmic  i.control-icon{
+    color: @white;
+    border-radius: 50%;
+    border: 2px solid #38b819;
+    padding: 4px;
+    font-size: 26px !important;
+}
+
+.nb-theme-default  i.control-icon{
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 26px !important;
+    border: 2px solid;
+}
+
+.nb-theme-default {
+    border-left: 0px;
+}
+
+
+
+.nb-theme-cosmic .toggle-layout{
+    display: none;
+}
+
+.nb-theme-cosmic .layout  nav a, .nb-theme-default  .layout  nav a{
+    display: inline-flex;
+}
+
+.nb-theme-cosmic nb-layout .layout  nav{
+    box-shadow: none;
+}
+
+.nb-theme-cosmic nb-menu{
+    background-color: @black;
+}
+
+
+
+ .nb-theme-default .toggle-layout{
+    display: none;
+}
+
+.nb-theme-cosmic  .control-item, .nb-theme-default  .control-item {
+    display: flex !important;
+}
+
+ .nb-theme-cosmic {
+    border-right: 2px solid @gray;
+    padding-right: 15px;
+}
+
+.nb-theme-cosmic .menu-item .menu-icon{
+    color: @green !important;
+}
+.nb-theme-cosmic .menu-item a{
+    color: @white !important;
+}
+
+.nb-theme-cosmic nb-menu .menu-item .chevron{
+    color: @green ;
+}
+.nb-theme-cosmic .menu-item a.active{
+    background-color: @black;
+}
+
+.nb-theme-cosmic nb-menu .menu-item a.active{
+    background-color: @black;
+}
+// .nb-theme-cosmic nb-menu .menu-item a:hover{
+//     background-color: @green;
+//     color: @white;
+// }
+
+// .nb-theme-cosmic nb-menu .menu-item a:hover .menu-icon{
+//     color: @white !important;
+// }
+
+
+.nb-theme-cosmic nb-menu .menu-item > .menu-items > .menu-item{
+    background-color: @black;
+}
+
+.nb-theme-cosmic nb-menu .menu-item > .menu-items > .menu-item a{
+    border: 0px;
+}
+.nb-theme-cosmic nb-menu .menu-item > .menu-items{
+    background-color: @black;
+}
+
+// .nb-theme-cosmic nb-menu .menu-item > .menu-items > .menu-item a:hover{
+//     background-color: @green;
+// }
+
+.nb-theme-cosmic nb-actions nb-action{
+    border-left: 0px !important;
+}
+
+
+.nb-theme-cosmic nb-actions nb-action i.control-icon{
+    color: @white;
+}
+
+/********
+main content
+
+**********/
+
+// card design
+.nb-theme-cosmic {
+    background-color: @darkgray-color;
+    box-shadow: none;
+}

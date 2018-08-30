@@ -1,0 +1,56 @@
+@import '../../../@theme/styles/themes';
+@import '~@nebular/theme/components/card/card.component.theme';
+@import '~@nebular/theme/styles/global/typography/typography';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+
+@include nb-install-component() {
+
+    .echart {
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    
+    nb-card{
+        nb-card-body {
+            padding-top: 0px;
+            .sensor-health-tabs /deep/ ul {
+                padding-left: 0px;
+                padding-right: 0px;
+                border-bottom: 0px;
+                align-content: center;
+                justify-content: space-between;
+                li{
+                    a{
+                        padding: 15px 10px 10px 10px;
+                        margin-right: 5px;
+                        font-size: 0.9rem;
+                        &::before{
+                            height: 3px;
+                            background-color: nb-theme(active-tab-border-bottom);
+                            border-radius: 0px;
+                            box-shadow: none;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+    @include nb-for-theme(cosmic) {
+        .sensor-health-tabs /deep/ ul {
+            li{
+                a{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    
+
+
+}

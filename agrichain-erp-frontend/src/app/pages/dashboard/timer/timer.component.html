@@ -1,0 +1,18 @@
+
+<div class="timer-container">
+
+    <div class="timer-item ">
+        <button class="btn timer-btn" (click)="start()"> Timer </button>
+    </div>
+    <div class="timer-item">
+        <input class="form-control" type="number" [(ngModel)]="minutes" />
+
+        <span class="timer-seprator"> : </span>
+        <input class="form-control" type="number" [(ngModel)]="seconds" />
+        {{ time }}
+    </div>
+
+    
+
+
+</div>

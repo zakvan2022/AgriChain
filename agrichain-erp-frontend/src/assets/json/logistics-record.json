@@ -1,0 +1,96 @@
+[
+  {
+    "id": "23167F",
+    "logisticsId": "23167F",
+    "barcode": "7A8B",
+    "produceType": "Garri",
+    "productionLocation": "Lagos",
+    "producedBy": "Honeywell Industries",
+    "productionTimestamp": "May 24, 18   7:58 PM",
+    "bestBeforeTimestamp": "May 24, 20",
+    "items": [
+      {
+        "temperature": "Temperature",
+        "temperatureUnit": "500C"
+      },
+      {
+        "temperature": "Humidity",
+        "temperatureUnit": "60C"
+      },
+      {
+        "temperature": "Air pressure",
+        "temperatureUnit": "140C"
+      }
+    ],
+    "senderName": "Chris Temlate",
+    "senderId": "A7G5GGJG",
+    "senderLocation": "LA",
+    "packagedBy": "Some texts",
+    "receiverName": "Chris Temlate",
+    "receiverId": "A7G5GGJF",
+    "receiverLocation": "LA",
+    "receivedBy": "Some texts",
+    "itemsTwo": [
+      {
+        "constituentsId": "2ABCD",
+        "constituentsType": "Garri",
+        "constituentsCompany": "Agrichain",
+        "constituentsTime": "24th May, 18",
+        "constituentsBarcodeId": "Garri"
+      }
+    ],
+    "itemsThree": [
+      {
+        "unavailableConstituentsId": "2ABCD",
+        "unavailableConstituentsType": "Garri",
+        "unavailableConstituentsCompany": "Agrichain",
+        "unavailableConstituentsTime": "24th May, 18",
+        "unavailableConstituentsLocation": "Dummy address"
+      }
+    ],
+    "comment": "23167F"
+  },
+  {
+    "id": "23167L",
+    "logisticsId": "23167L",
+    "barcode": "7A8A",
+    "produceType": "Demo Product Type",
+    "productionLocation": "Lagos",
+    "producedBy": "Honeywell Industries",
+    "productionTimestamp": "May 24, 18   7:58 PM",
+    "bestBeforeTimestamp": "May 24, 20",
+    "items": [
+      {
+        "temperature": "Temperature",
+        "temperatureUnit": "100C"
+      }
+    ],
+    "senderName": "Chris Temlate",
+    "senderId": "A7G5GGJG",
+    "senderLocation": "LA",
+    "packagedBy": "Some texts",
+    "receiverName": "Chris Temlate",
+    "receiverId": "A7G5GGJF",
+    "receiverLocation": "LA",
+    "receivedBy": "Some texts",
+    "itemsTwo": [
+      {
+        "constituentsId": "WABCD",
+        "constituentsType": "Demo Constituents Type",
+        "constituentsCompany": "Agrichain",
+        "constituentsTime": "24th May, 18",
+        "constituentsBarcodeId": "WE311A"
+      }
+    ],
+    "itemsThree": [
+      {
+        "unavailableConstituentsId": "2ABCD",
+        "unavailableConstituentsType": "Garri",
+        "unavailableConstituentsCompany": "Agrichain",
+        "unavailableConstituentsTime": "24th May, 18",
+        "unavailableConstituentsLocation": "Dummy address"
+      }
+    ],
+    "comment": "23167F"
+  }
+]

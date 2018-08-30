@@ -1,0 +1,15 @@
+type Company {
+  id: ID!
+}
+
+extend type Query {
+  companies: [Company!]!
+}
+
+extend type Mutation {
+  createCompany(input: newCompanyInput!): Company!
+}
+
+input newCompanyInput {
+  id: ID!
+}

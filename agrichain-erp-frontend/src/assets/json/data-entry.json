@@ -1,0 +1,44 @@
+[
+	{
+		"id": 0,
+		"link": "create-batch-record",
+		"type": "create",
+		"name": "Batch Record",
+		"icon": "batch_record1.png"
+	},
+	{
+		"id": 1,
+		"link": "edit-batch-record",
+		"type": "edit",
+		"name": "Batch Record",
+		"icon": "batch_record2.png"
+	},
+	{
+		"id": 2,
+		"link": "reuse-batch-record",
+		"type": "reuse",
+		"name": "Batch Record",
+		"icon": "batch_record3.png"
+	},
+	{
+		"id": 3,
+		"link": "create-logistics-record",
+		"type": "create",
+		"name": "Logistics Record",
+		"icon": "batch_record1.png"
+	},
+	{
+		"id": 4,
+		"link": "edit-logistics-record",
+		"type": "edit",
+		"name": "Logistics Record",
+		"icon": "batch_record2.png"
+	},
+	{
+		"id": 5,
+		"link": "reuse-logistics-record",
+		"type": "reuse",
+		"name": "Logistics Record",
+		"icon": "batch_record3.png"
+	}
+]

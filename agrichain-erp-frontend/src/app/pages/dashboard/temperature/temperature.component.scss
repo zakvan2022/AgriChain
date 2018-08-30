@@ -1,0 +1,108 @@
+@import '../../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+
+@include nb-install-component() {
+
+
+  
+
+  nb-tabset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 120px; 
+    /deep/ ul {
+      border: none;
+      li{
+        a{
+          padding-bottom: 10px;
+          &:before{
+            box-shadow: none;
+            background-image: none;
+            border-radius: 0px;
+            background-color: #03B837;
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  nb-tab.content-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+  }
+
+  
+
+  
+
+  .btn-group {
+    padding: 1.25rem;
+    justify-content: center;
+  }
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 0;
+    margin-bottom: 0;
+    color: nb-theme(color-fg);
+
+    &.active {
+      border-color: nb-theme(color-fg-highlight);
+      color: nb-theme(color-fg-highlight);
+    }
+
+    i {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+  }
+
+  @include nb-for-theme(cosmic) {
+    .btn-icon.active {
+      color: nb-theme(color-fg-heading);
+      border-color: nb-theme(color-fg-highlight);
+      box-shadow: 0 2px 12px 0 rgba(nb-theme(color-fg-highlight), 0.25);
+      background-color: rgba(nb-theme(color-fg-highlight), 0.25);
+    }
+    
+    nb-tabset {
+      /deep/ ul {
+        li{
+          a{
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .btn-icon {
+      width: 3.25rem;
+      height: 3.25rem;
+      i {
+        font-size: 1.75rem;
+      }
+    }
+
+    nb-tabset /deep/ ul {
+      padding: 0 0.5rem;
+      a {
+        padding: 1.25rem 1rem;
+      }
+    }
+  }
+}

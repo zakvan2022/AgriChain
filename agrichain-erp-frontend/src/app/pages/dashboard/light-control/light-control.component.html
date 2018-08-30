@@ -1,0 +1,58 @@
+<nb-card size="large">
+  <nb-card-header>Light Control</nb-card-header>
+  <nb-card-body>
+    <div class="dropdown-items dropdowns-light">
+      <div class="dropdown-li">
+        <div class="dropdown" ngbDropdown *ngIf="profile.selected_id">
+          <button type="button" ngbDropdownToggle class="btn"
+                  [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'success-dropdown-btn': currentTheme != 'default'}">
+            Zone 
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let p of profile.items" (click)="profile.selected_id = p.id">{{ p.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="dropdown-li">
+        <div class="dropdown" ngbDropdown  *ngIf="zones.selected_id">
+          <button type="button" ngbDropdownToggle class="btn"
+                  [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'success-dropdown-btn': currentTheme != 'default'}">
+            Profile
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let p of zones.items" (click)="zones.selected_id = p.id">{{ p.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="dropdown-li">
+        <div class="dropdown" ngbDropdown *ngIf="bulb.selected_id">
+          <button type="button" ngbDropdownToggle class="btn"
+                  [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'success-dropdown-btn': currentTheme != 'default'}">
+            Outlet
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let p of bulb.items" (click)="bulb.selected_id = p.id">{{ p.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+    
+    <div class="row">
+      <div class="col-md-12">
+        <ngx-dragger-container></ngx-dragger-container>
+      </div>
+      <div class="col-md-12">
+        <ngx-timer> </ngx-timer>
+      </div>
+    </div>
+
+
+  </nb-card-body>
+</nb-card>

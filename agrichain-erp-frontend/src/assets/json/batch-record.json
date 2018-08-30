@@ -1,0 +1,98 @@
+[
+  {
+    "id": "23167G",
+    "batchId": "23167G",
+    "barcode": "7A8BA",
+    "produceType": "Garri",
+    "productionLocation": "Lagos",
+    "producedBy": "Honeywell Industries",
+    "productionTimestamp": "May 24, 18   7:58 PM",
+    "batchBestTimestamp": "May 24, 20",
+    "items": [
+      {
+        "temperature": "Temperature",
+        "temperatureUnit": "500C"
+      },
+      {
+        "temperature": "Temperature2",
+        "temperatureUnit": "300C"
+      },
+      {
+        "temperature": "Temperature3",
+        "temperatureUnit": "700C"
+      }
+    ],
+    "itemsTwo": [
+      {
+        "constituentsId": "2ABCD",
+        "constituentsType": "Garri",
+        "constituentsCompany": "Agrichain",
+        "constituentsTime": "24th May, 18",
+        "constituentsBarcodeId": "7A8B"
+      },
+      {
+        "constituentsId": "2ABCD",
+        "constituentsType": "Garri",
+        "constituentsCompany": "Agrichain",
+        "constituentsTime": "24th May, 18",
+        "constituentsBarcodeId": "7A8B"
+      }
+    ],
+    "itemsThree": [
+      {
+        "unavailableConstituentsId": "2ABCD",
+        "unavailableConstituentsType": "Garri",
+        "unavailableConstituentsCompany": "Agrichain",
+        "unavailableConstituentsTime": "24th May, 18",
+        "unavailableConstituentsLocation": "7A8B"
+      },
+      {
+        "unavailableConstituentsId": "1ABCD",
+        "unavailableConstituentsType": "Garri",
+        "unavailableConstituentsCompany": "Agrichain",
+        "unavailableConstituentsTime": "23th May, 18",
+        "unavailableConstituentsLocation": "7A8B"
+      }
+    ],
+    "comment": "Comments"
+  },
+  {
+    "id": "23167H",
+    "batchId": "23167H",
+    "barcode": "7A8BAA",
+    "produceType": "Garri",
+    "productionLocation": "Lagos",
+    "producedBy": "Honeywell Industries",
+    "productionTimestamp": "May 24, 18   7:58 PM",
+    "batchBestTimestamp": "May 24, 20",
+    "items": [
+      {
+        "temperature": "Temperature",
+        "temperatureUnit": "500C"
+      },
+      {
+        "temperature": "Temperature2",
+        "temperatureUnit": "300C"
+      }
+    ],
+    "itemsTwo": [
+      {
+        "constituentsId": "2ABCD",
+        "constituentsType": "Garri",
+        "constituentsCompany": "Agrichain",
+        "constituentsTime": "24th May, 18",
+        "constituentsBarcodeId": "7A8B"
+      }
+    ],
+    "itemsThree": [
+      {
+        "unavailableConstituentsId": "2ABCD",
+        "unavailableConstituentsType": "Garri",
+        "unavailableConstituentsCompany": "Agrichain",
+        "unavailableConstituentsTime": "24th May, 18",
+        "unavailableConstituentsLocation": "7A8B"
+      }
+    ],
+    "comment": "Comments"
+  }
+]

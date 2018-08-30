@@ -1,0 +1,39 @@
+type LogisticRecord {
+  id: ID!
+  createdAt: Date
+  updatedAt: Date
+  barcode: String
+  produceType: String
+  produceLocation: String
+  productionTimestamp: Date
+  bestBeforeTimestamp: Date
+  metadata: String
+  constituents: [Constituent]
+  properties: [Property]
+}
+
+extend type Query {
+  logisticRecords: [BatchRecord!]!
+}
+
+extend type Mutation {
+  createLogisticRecord(input: newLogisticRecordInput!): LogisticRecord!
+}
+
+input newLogisticRecordInput {
+  barcode: String
+  produceType: String
+  produceLocation: String
+  productionTimestamp: Date
+  bestBeforeTimestamp: Date
+  metadata: String
+  constituents: [String]!
+  properties: [PropertyInput]!
+  metadata: String
+  
+  sender: ID!
+  packagedBy: String!
+  receiver: ID!
+  receivedBy: String!
+  
+}

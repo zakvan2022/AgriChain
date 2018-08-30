@@ -1,0 +1,34 @@
+<nb-card>
+	<nb-card-header>
+		<h2>Data Entry</h2>
+		<br>
+		<div class="search-box">
+			<div class="input-group">
+				<input type="text" placeholder="Search forms" class="form-control" />
+			</div>
+			<button class="btn-search">
+				<i class="nb-search"></i>
+			</button>
+		</div>
+	</nb-card-header>
+	<nb-card-body>
+		<div class="forms">
+			<ul>
+				<li *ngFor=" let form of forms ">
+					<a [routerLink]="form.link">
+						<div class="box">
+							<div class="icon">
+								<img src="assets/images/{{form.icon}}" alt="">
+							</div>
+							<div class="content">
+								<p>
+									<small>{{form.type}}</small> {{form.name}}
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nb-card-body>
+</nb-card>

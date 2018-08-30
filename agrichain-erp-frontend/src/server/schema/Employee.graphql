@@ -1,0 +1,15 @@
+type Employee {
+  id: ID!
+}
+
+extend type Query {
+  employees: [Employee!]!
+}
+
+extend type Mutation {
+  createEmployee(input: newEmployeeInput!): Employee!
+}
+
+input newEmployeeInput {
+  id: ID!
+}

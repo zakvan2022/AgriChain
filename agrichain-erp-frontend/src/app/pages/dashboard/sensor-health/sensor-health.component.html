@@ -1,0 +1,12 @@
+<nb-card size="large">
+    <nb-card-header>Sensors Health</nb-card-header>
+    <nb-card-body>
+      <nb-tabset class="sensor-health-tabs" fullWidth>
+        <nb-tab tabTitle="ALL SENSORS">
+          <div echarts [options]="option" class="echart"></div>
+        </nb-tab>
+        <nb-tab tabTitle="BAD SENSORS LIST">
+        </nb-tab>
+      </nb-tabset>
+    </nb-card-body>
+  </nb-card>

@@ -1,0 +1,178 @@
+<nb-card>
+  <nb-card-header>
+    <div class="title">
+      <h2>Batch Result</h2>
+      <a class="btn-trace">Map Trace</a>
+    </div>
+  </nb-card-header>
+</nb-card>
+
+<div class="batch-record" *ngFor="let record of batchRecords">
+  <div class="record">
+    <nb-card>
+      <nb-card-header>
+        <h2>Batch Details</h2>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="form-group">
+          <label class="label">Batch ID:</label>
+          <div class="control">
+            <p>{{record.batchId}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="label">Barcode:</label>
+          <div class="control">
+            <p>{{record.barcode}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="label">Produce type:</label>
+          <div class="control">
+            <p>{{record.produceType}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="label">Production location:</label>
+          <div class="control">
+            <p>{{record.productionLocation}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="label">Produced by:</label>
+          <div class="control">
+            <p>{{record.producedBy}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label class="label">Production timestamp:</label>
+            <div class="control">
+              <p>{{record.productionTimestamp}}</p>
+            </div>
+          </div>
+          <div class="col-md-6 form-group">
+            <label class="label">Batch best before:</label>
+            <div class="control">
+              <p>{{record.batchBestTimestamp}}</p>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="record">
+    <nb-card>
+      <nb-card-header>
+        <h2>Batch Properties</h2>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="table-box">
+          <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+            <thead>
+              <tr>
+                <th>Properties</th>
+                <th>Values</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let item of record['items']">
+                <td> {{item.temperature}} </td>
+                <td> {{item.temperatureUnit}} </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <nb-tabset>
+
+          <nb-tab tabTitle="MADE FROM">
+            <div class="tab-box">
+              <div class="table-box">
+                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Company</th>
+                      <th>Type</th>
+                      <th>Location</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2A9BC</td>
+                      <td>AgriChain</td>
+                      <td>Cassava</td>
+                      <td>Abuja</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="USED IN">
+            <div class="tab-box">
+              <div class="tab-box">
+                <div class="table-box">
+                  <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Company</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2A9BC</td>
+                        <td>AgriChain</td>
+                        <td>Cassava</td>
+                        <td>Abuja</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+        </nb-tabset>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="record">
+    <nb-card>
+      <nb-card-header>
+        <h2>Metadata</h2>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="metadata">
+          <div class="form-group">
+            <label class="label">Recorded by:</label>
+            <div class="control">
+              <p>Tunde Alawode</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Recording timestamp:</label>
+            <div class="control">
+              <p>28th May, 2018</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Recording location:</label>
+            <div class="control">
+              <p>AgriChain Farms, 12, Mokola Street, Mowe Ibafo</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Comment:</label>
+            <div class="control">
+              <p> {{record.Comment}}</p>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

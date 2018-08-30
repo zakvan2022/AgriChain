@@ -1,0 +1,69 @@
+<nb-card size="large">
+    <nb-card-header>Weather Report</nb-card-header>
+    <nb-card-body *ngIf="weather">
+      <nb-tabset class="air-sun-block" fullWidth>
+        <nb-tab tabTitle="Today">
+          <div class="location">
+            <span>{{ weather.location }}</span>
+          </div>
+          <div class="date">
+            <span>{{ date }}</span>
+          </div>
+          <div class="daily-forecast">
+            <div class="info">
+              <div class="temperature">
+                <span>{{ weather.temp }}&deg;</span>
+              </div>
+              <div class="icon">
+                <i [class]="weather.iconClass"></i>
+              </div>
+            </div>
+            <div class="details">
+              <div class="parameter">
+                <span class="parameter-name">max</span>
+                <span class="parameter-value">{{ weather.maxTemp }}&deg;</span>
+              </div>
+              <div class="parameter">
+                <span class="parameter-name">min</span>
+                <span class="parameter-value">{{ weather.minTemp }}&deg;</span>
+              </div>
+              <div class="parameter">
+                <span class="parameter-name">wind</span>
+                <span class="parameter-value">{{ weather.wind.speed }} km/h</span>
+              </div>
+              <div class="parameter">
+                <span class="parameter-name">hum</span>
+                <span class="parameter-value">{{ weather.humidity }}%</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="weather_chart_container">
+            <ngx-weather-forcast-chart></ngx-weather-forcast-chart>
+          </div> -->
+          <div class="weekly-forecast">
+            <div class="day" *ngFor="let item of today_forcast">
+              <span class="caption">{{ get_date_day(item.data) }}</span>
+              <i [class]="item.iconClass"></i>
+              <span class="temperature">{{ item.temp }}&deg;</span>
+            </div>
+          </div>
+      
+          <div class="pricipitation-chances">
+                <p> <span class="pre-icon"> <i [class]="weather.iconClass"></i> </span>  50% chances of precipitation today</p>  
+          </div>
+          <div class="shot-wheather-report">
+                <p >Hum: <span>60%</span> </p>
+                <p >Dew: <span>27<sub>0</sub>c</span> </p>
+                <p >Visibility: <span>4km</span> </p>
+                <p>Pressure: <span>1,001mBar</span> </p>
+                <p>UV: <span>1,001mBar</span> </p>
+          </div>
+        </nb-tab>
+
+        <nb-tab tabTitle="Tommorrow">
+        </nb-tab>
+        <nb-tab tabTitle="10 Days">
+        </nb-tab>
+    </nb-tabset>
+  </nb-card-body>
+</nb-card>

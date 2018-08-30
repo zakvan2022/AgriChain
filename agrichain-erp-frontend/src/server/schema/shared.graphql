@@ -1,0 +1,12 @@
+# Define custom type
+scalar Date
+
+type Property {
+  name: String
+  value: String
+}
+
+input PropertyInput {
+  name: String
+  value: String
+}

@@ -1,0 +1,324 @@
+<nb-card>
+  <nb-card-header>
+    <div class="title">
+      <h2>Edit Logistic Record</h2>
+    </div>
+    <div class="trace-box">
+      <div class="row">
+        <div class="col-md-8">
+          <input type="text" ([ngModel])="searchText" #searchText placeholder="Enter id or bardcode" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <div class="acions">
+            <button class="btn-trace" type="submit" (click)="trace(searchText.value)">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nb-card-header>
+</nb-card>
+
+<div class="noresult" *ngIf="noResultFound">
+  <nb-card>
+    <nb-card-body>
+      <h2 style="margin:0;">No results found</h2>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<nb-card *ngIf="isEditshow">
+  <nb-card-header>
+    <div class="title">
+      <h2>Logistic Details</h2>
+    </div>
+  </nb-card-header>
+</nb-card>
+
+<div class="batch-record" *ngIf="isEditshow">
+  <form action="#" [formGroup]="editLogisticsRecord" (ngSubmit)="LogisticsRecordData()">
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>logistics Details</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="form-group">
+            <label class="label">Logistics ID:</label>
+            <div class="control">
+              <input type="text" formControlName="logisticsId" placeholder="23167F" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Barcode:</label>
+            <div class="control">
+              <input type="text" placeholder="7A8B" formControlName="barcode" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Produce type:</label>
+            <div class="control">
+              <input type="text" placeholder="Garri" formControlName="produceType" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Production location:</label>
+            <div class="control">
+              <input type="text" placeholder="Lagos" formControlName="productionLocation" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Produced by:</label>
+            <div class="control">
+              <input type="text" placeholder="Honeywell Industries" formControlName="producedBy" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Production timestamp:</label>
+            <div class="control">
+              <input type="text" placeholder="May 24, 18   7:58 PM" formControlName="productionTimestamp" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label">Best Before timestamp:</label>
+            <div class="control">
+              <input type="text" placeholder="May 24, 20" formControlName="bestBeforeTimestamp" class="form-control">
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>logistics properties</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="table-box">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Properties</th>
+                  <th>Values</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody formArrayName="items" *ngFor="let item of editLogisticsRecord.get('items').controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <input type="text" placeholder="Temperature" formControlName="temperature" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="500C" formControlName="temperatureUnit" class="form-control">
+                  </td>
+                  <td>
+                    <div class="action">
+                      <a class="add" (click)="addItem()">Add</a>
+                      <a class="remove" (click)="removeItem(i)">Remove</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>logistics Details</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <nb-tabset>
+
+            <nb-tab tabTitle="Sender">
+              <div class="tab-box">
+                <div class="form-group">
+                  <label class="label">Sender name:</label>
+                  <div class="control">
+                    <input type="text" formControlName="senderName" placeholder="Chris Temlate" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Sender’s ID:</label>
+                  <div class="control">
+                    <input type="text" formControlName="senderId" placeholder="A7G5GGJG" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Sender location:</label>
+                  <div class="control">
+                    <input type="text" formControlName="senderLocation" placeholder="LA" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Packaged by:</label>
+                  <div class="control">
+                    <input type="text" formControlName="packagedBy" placeholder="Some texts" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </nb-tab>
+
+            <nb-tab tabTitle="Receiver">
+              <div class="tab-box">
+                <div class="form-group">
+                  <label class="label">Receiver name:</label>
+                  <div class="control">
+                    <input type="text" formControlName="receiverName" placeholder="Chris Temlate" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Receiver's ID:</label>
+                  <div class="control">
+                    <input type="text" formControlName="receiverId" placeholder="A7G5GGJG" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Receiver location:</label>
+                  <div class="control">
+                    <input type="text" formControlName="receiverLocation" placeholder="LA" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="label">Received by:</label>
+                  <div class="control">
+                    <input type="text" formControlName="receivedBy" placeholder="Some texts" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </nb-tab>
+          </nb-tabset>
+
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>add constituents</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="table-box">
+            <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+              <thead>
+                <tr class="head-title">
+                  <th>constituents</th>
+                  <th colspan="5">details</th>
+                </tr>
+                <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Company</th>
+                  <th>Time</th>
+                  <th>Barcode/ID</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody formArrayName="itemsTwo" *ngFor="let ItemTwo of editLogisticsRecord.get('itemsTwo').controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <input type="text" readonly="readonly" formControlName="constituentsId" placeholder="2ABCD" value="2ABCD" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Garri" formControlName="constituentsType" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Agrichain" formControlName="constituentsCompany" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="24th May, 18" formControlName="constituentsTime" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Garri" formControlName="constituentsBarcodeId" class="form-control">
+                  </td>
+                  <td>
+                    <div class="action">
+                      <a class="add" (click)="addItemTwo()">Add</a>
+                      <a class="remove" (click)="removeItemTwo(i)">Remove</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>create unavailable constituents</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="table-box">
+            <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+              <thead>
+                <tr class="head-title">
+                  <th>constituents</th>
+                  <th colspan="5">details</th>
+                </tr>
+                <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Company</th>
+                  <th>Time</th>
+                  <th>Location</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody formArrayName="itemsThree" *ngFor="let ItemThree of editLogisticsRecord.get('itemsThree').controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <input type="text" readonly="readonly" formControlName="unavailableConstituentsId" placeholder="2ABCD" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Garri" formControlName="unavailableConstituentsType" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Agrichain" formControlName="unavailableConstituentsCompany" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="24th May, 18" formControlName="unavailableConstituentsTime" class="form-control">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Dummy address" formControlName="unavailableConstituentsLocation" class="form-control">
+                  </td>
+                  <td>
+                    <div class="action">
+                      <a class="add" (click)="addItemThree()">Add</a>
+                      <a class="remove" (click)="removeItemThree(i)">Remove</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="record">
+      <nb-card>
+        <nb-card-header>
+          <h2>Metadata</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="metadata">
+            <div class="row form-group">
+              <div class="col-md-4">
+                <label>Comment:</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" formControlName="comment" placeholder="23167F" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="submit">
+            <input type="submit" class="btn-submit" value="Edit">
+            <!-- <button type="submit" class="btn-submit">Create</button> -->
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </form>
+</div>
